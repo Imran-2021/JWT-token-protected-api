@@ -5,7 +5,18 @@ const Collections = () => {
     const [data,setData]=useState([])
     const [loggedInUser, setLoggedInUser]=useContext(UserContext);
     useEffect(() => {
-        fetch("http://localhost:3002/user?email="+ loggedInUser.email)
+        fetch("http://localhost:3002/user?email="+ loggedInUser.email,{
+            method:'GET',
+            headers: {'Content-Type': 'application/json',
+            'Authorization': `Bearer ${sessionStorage.getItem('token')}`
+        
+        },
+
+
+
+            
+
+        })
         .then(res=>res.json())
         .then(data => {
             setData(data)

@@ -36,7 +36,7 @@ const Book = () => {
 
             <input type="text" name="name" placeholder="name" id="name" />
             <br /><br />
-            <input type="email" name="email" placeholder="name" value={loggedInUser.email} id="email" />
+            <input type="email" name="email" placeholder="name" value={loggedInUser.email} id="email" readOnly/>
             <br /><br />
             <input type="text" name="age" placeholder="age" id="age" />
             <br /> <br />
